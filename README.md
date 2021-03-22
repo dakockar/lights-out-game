@@ -1,7 +1,7 @@
 # Lights Out Game
 
 ## Description
-- A clone of the lights out game from 80s,
+- A clone of the lights out game from 80s.
 - Made with React, using React hooks for state management.
 
 ## How To Play

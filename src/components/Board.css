@@ -23,6 +23,21 @@
   justify-content: space-evenly;
 }
 
+.Board-button {
+  border: none;
+  background-color: rgba(121, 108, 133, 0.5);
+  font-family: 'Syne Mono', monospace;
+  color: white;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  margin-top: 30px;
+  transition: 0.2s ease;
+}
+
+.Board-button:hover {
+  background-color: rgba(121, 108, 133, 0.8);
+}
+
 /* @-webkit-keyframes glow {
   from {
     box-shadow: 0 0 7px 2px rgb(121, 108, 133), 0 0 30px 5px rgb(255, 230, 234), 0 0 40px 10px rgb(255, 230, 234), 0 0 50px 5px rgb(255, 230, 234);

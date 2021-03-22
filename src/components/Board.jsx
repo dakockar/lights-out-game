@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Tile from "./Tile";
 import './Board.css';
+import Timer from "./Timer";
 
 // game board
 
@@ -9,6 +10,30 @@ function Board(props) {
   // set initial state
   const [isWinner, setWinner] = useState(false);
   const [board, setBoard] = useState(createBoard());
+  const [time, setTime] = useState(0);
+  const [intervalId, setId] = useState(0);
+  const [moves, setMoves] = useState(0);
+
+
+  function resetGame() {
+    clearInterval(intervalId);
+    startTimer();
+
+    setWinner(false);
+    setBoard(createBoard());
+    setMoves(0);
+  }
+
+
+  function startTimer() {
+    setTime(0);
+
+    let id = setInterval(() => {
+      setTime(prevTime => prevTime + 1);
+    }, 1000);
+
+    setId(id);
+  }
 
   // create a rows X cols sized board, each tile randomly lit or unlit
   function createBoard() {
@@ -52,6 +77,7 @@ function Board(props) {
 
     hasWon = changedBoard.every(row => row.every(tile => !tile))
 
+    setMoves(prevMoves => prevMoves + 1);
     setBoard(changedBoard);
     setWinner(hasWon);
   }
@@ -78,15 +104,30 @@ function Board(props) {
     displayedBoard.push(<div className="Board-row" key={y}>{row}</div>)
   }
 
+  useEffect(() => {
+    startTimer();
+  }, [])
+
+
   return (
-    isWinner
-      ? <h1 className="h1-glow">you win!</h1>
-      : <div>
-        <h1 className="h1-glow" > make it dark</h1>
-        <div className="Board">
-          {displayedBoard.map(row => row)}
-        </div>
-      </div>
+    <div>
+      {
+        isWinner
+          ? <div>
+            {clearInterval(intervalId)}
+            <h1 className="h1-glow">you win!</h1>
+          </div>
+          : <div>
+            <h1 className="h1-glow"> make it dark</h1>
+            <div className="Board">
+              {displayedBoard.map(row => row)}
+            </div>
+          </div>
+      }
+      <Timer time={time} />
+      <div>Moves: {moves}</div>
+      <button className="Board-button" onClick={resetGame}>restart</button>
+    </div>
   )
 }
 
