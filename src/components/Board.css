@@ -1,0 +1,44 @@
+.Board {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 80px auto;
+  border-radius: 5px;
+  width: 530px;
+  height: 530px;
+  background-color: rgb(121, 108, 133);
+  box-shadow: 0 0 5px 2px rgb(121, 108, 133), 0 0 40px 5px rgb(255, 230, 234);
+  /* animation: glow 1.7s ease-in-out infinite alternate; */
+}
+
+.h1-glow {
+  font-size: 50px;
+  letter-spacing: 0.4em;
+  animation: glow-text 2s ease-in-out infinite alternate;
+}
+
+.Board-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* @-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 7px 2px rgb(121, 108, 133), 0 0 30px 5px rgb(255, 230, 234), 0 0 40px 10px rgb(255, 230, 234), 0 0 50px 5px rgb(255, 230, 234);
+  }
+  to {
+    box-shadow: 0 0 7px 2px rgb(121, 108, 133), 0 0 40px 5px rgb(255, 230, 234), 0 0 50px 10px rgb(255, 230, 234);
+  }
+} */
+
+@-webkit-keyframes glow-text {
+  from {
+    color: rgb(121, 108, 133);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffcde6, 0 0 30px #ffcde6, 0 0 50px #ffcde6, 0 0 60px #ffcde6;
+  }
+  to {
+    color: rgb(59, 52, 66);
+    text-shadow: 0 0 10px #fff, 0 0 30px #ffcde6, 0 0 40px #ffcde6, 0 0 50px #ffcde6, 0 0 60px #ffcde6, 0 0 70px #ffcde6;
+  }
+}

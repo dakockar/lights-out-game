@@ -1,0 +1,18 @@
+.Cell {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(27, 18, 32);
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px rgb(27, 18, 32);
+  transition: 0.2s;
+}
+
+.Cell-lit {
+  background-color: rgb(255, 248, 252);
+  box-shadow: 0 0 3px 1px rgb(255, 236, 247);
+  transition: 0.1s;
+}
+
+.Cell:hover {
+  transform: scale(1.02);
+}
