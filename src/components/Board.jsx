@@ -108,7 +108,6 @@ function Board(props) {
     startTimer();
   }, [])
 
-
   return (
     <div>
       {
@@ -118,7 +117,7 @@ function Board(props) {
             <h1 className="h1-glow">you win!</h1>
           </div>
           : <div>
-            <h1 className="h1-glow"> make it dark</h1>
+            <h1 className="h1-glow">make it dark</h1>
             <div className="Board">
               {displayedBoard.map(row => row)}
             </div>

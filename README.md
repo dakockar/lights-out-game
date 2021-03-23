@@ -6,3 +6,5 @@
 
 ## How To Play
 Click on a tile to toggle that tile and its neighbours. The goal is to turn out all the lights.
+
+### [play lights out](https://lights-out-7aa92.web.app/)

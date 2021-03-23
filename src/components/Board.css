@@ -4,16 +4,18 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin: 80px auto;
-  border-radius: 5px;
-  width: 530px;
-  height: 530px;
+  max-width: 530px;
+  max-height: 530px;
+  width: 70vw;
+  height: 70vw;
   background-color: rgb(121, 108, 133);
+  border-radius: 5px;
   box-shadow: 0 0 5px 2px rgb(121, 108, 133), 0 0 40px 5px rgb(255, 230, 234);
   /* animation: glow 1.7s ease-in-out infinite alternate; */
 }
 
 .h1-glow {
-  font-size: 50px;
+  font-size: 4vmax;
   letter-spacing: 0.4em;
   animation: glow-text 2s ease-in-out infinite alternate;
 }
@@ -30,7 +32,8 @@
   color: white;
   border-radius: 3px;
   padding: 0.5em 1em;
-  margin-top: 30px;
+  width: 80px;
+  margin: 30px auto;
   transition: 0.2s ease;
 }
 
@@ -57,3 +60,5 @@
     text-shadow: 0 0 10px #fff, 0 0 30px #ffcde6, 0 0 40px #ffcde6, 0 0 50px #ffcde6, 0 0 60px #ffcde6, 0 0 70px #ffcde6;
   }
 }
+
+/* TODO: responsive when turned the screen */

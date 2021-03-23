@@ -9,7 +9,7 @@ function Tile(props) {
     props.toggleTiles();
   }
 
-  let classes = "Cell" + (props.isLit ? " Cell-lit" : "");
+  let classes = "Tile" + (props.isLit ? " Tile-lit" : "");
 
   return (
     <div className={classes} onClick={handleClick} />
